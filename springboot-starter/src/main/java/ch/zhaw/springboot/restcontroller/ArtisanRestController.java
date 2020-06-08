@@ -1,10 +1,12 @@
 package ch.zhaw.springboot.restcontroller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,5 +30,17 @@ public class ArtisanRestController {
 		}
 	} 
 	
+	@RequestMapping(
+			value = "artisan/{Id}",
+			method = RequestMethod.GET)
+	public ResponseEntity<Optional<Artisan>> getPersonById(
+			@PathVariable("Id") long Id) {
+				Optional<Artisan> result = this.repository.findById(Id);
+				if (result != null) {
+					return new ResponseEntity<Optional<Artisan>>(result, HttpStatus.OK);
+				} else {
+					return new ResponseEntity<Optional<Artisan>>(HttpStatus.NOT_FOUND);
+					}
+	}	
 
 }
