@@ -1,0 +1,13 @@
+ch\zhaw\springboot\repositories\PersonRepository.class
+ch\zhaw\springboot\entities\Person.class
+ch\zhaw\springboot\repositories\ArtisanRepository.class
+ch\zhaw\springboot\repositories\EngagementRepository.class
+ch\zhaw\springboot\restcontroller\ArtisanRestController.class
+ch\zhaw\springboot\InfMApplication.class
+ch\zhaw\springboot\restcontroller\PersonRestController.class
+ch\zhaw\springboot\entities\Engagement.class
+ch\zhaw\springboot\repositories\BuyerRepository.class
+ch\zhaw\springboot\restcontroller\BuyerRestController.class
+ch\zhaw\springboot\entities\Buyer.class
+ch\zhaw\springboot\entities\Artisan.class
+ch\zhaw\springboot\restcontroller\EngagementRestController.class
