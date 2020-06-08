@@ -28,19 +28,16 @@ public class ArtisanRestController {
 		} else {
 			return new ResponseEntity<List<Artisan>>(HttpStatus.NOT_FOUND);
 		}
-	} 
-	
-	@RequestMapping(
-			value = "artisan/{Id}",
-			method = RequestMethod.GET)
-	public ResponseEntity<Optional<Artisan>> getPersonById(
-			@PathVariable("Id") long Id) {
-				Optional<Artisan> result = this.repository.findById(Id);
-				if (result != null) {
-					return new ResponseEntity<Optional<Artisan>>(result, HttpStatus.OK);
-				} else {
-					return new ResponseEntity<Optional<Artisan>>(HttpStatus.NOT_FOUND);
-					}
-	}	
+	}
+
+	@RequestMapping(value = "artisan/{Id}", method = RequestMethod.GET)
+	public ResponseEntity<Optional<Artisan>> getPersonById(@PathVariable("Id") long Id) {
+		Optional<Artisan> result = this.repository.findById(Id);
+		if (result != null) {
+			return new ResponseEntity<Optional<Artisan>>(result, HttpStatus.OK);
+		} else {
+			return new ResponseEntity<Optional<Artisan>>(HttpStatus.NOT_FOUND);
+		}
+	}
 
 }
