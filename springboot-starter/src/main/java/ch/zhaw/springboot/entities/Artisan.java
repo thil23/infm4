@@ -10,7 +10,7 @@ public class Artisan extends Person {
 
 	
 	private String artisanProfession;
-	
+	//Commitcheck
 
 	//Konstruktor
 	public Artisan(String artisanProfession) {
