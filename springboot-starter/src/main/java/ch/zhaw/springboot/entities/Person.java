@@ -16,16 +16,31 @@ public class Person {
 	private long id;
 	private String name;
 	private String eMailaddress;
-	
+
+	// Setter
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void seteMailaddress(String eMailaddress) {
+		this.eMailaddress = eMailaddress;
+	}
+
+	// Getter
 	public long getId() {
 		return id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public String geteMailaddress() {
 		return eMailaddress;
 	}
-	
-	
+
 }

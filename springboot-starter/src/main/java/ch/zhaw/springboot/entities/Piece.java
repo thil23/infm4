@@ -19,13 +19,23 @@ public class Piece {
 		this.id = id;
 		this.pieceName = pieceName;
 	}
-
+	
+	// Getter
 	public long getId() {
 		return id;
 	}
 
 	public String getPieceName() {
 		return pieceName;
+	}
+	
+	// Setter
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setPieceName(String pieceName) {
+		this.pieceName = pieceName;
 	}
 
 	

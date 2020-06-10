@@ -16,9 +16,9 @@ public class Engagement {
 	private long engagementId;
 	private long duration;
 	private double price;
-	
-	//Konstruktor
-	
+
+	// Konstruktor
+
 	public Engagement(long engagementId, long duration, double price, Artisan artisan, Buyer buyer) {
 		this.engagementId = engagementId;
 		this.duration = duration;
@@ -28,10 +28,11 @@ public class Engagement {
 	}
 
 	public Engagement() {
-		
+
 	}
 
 	// Getter
+
 	public long getEngagementId() {
 		return this.engagementId;
 	}
@@ -56,7 +57,33 @@ public class Engagement {
 		return pieces;
 	}
 
-	// Beziehungen 
+	// Setter
+
+	public void setEngagementId(long engagementId) {
+		this.engagementId = engagementId;
+	}
+
+	public void setDuration(long duration) {
+		this.duration = duration;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public void setArtisan(Artisan artisan) {
+		this.artisan = artisan;
+	}
+
+	public void setBuyer(Buyer buyer) {
+		this.buyer = buyer;
+	}
+
+	public void setPieces(Set<Piece> pieces) {
+		this.pieces = pieces;
+	}
+
+	// Beziehungen
 	@ManyToOne
 	private Artisan artisan;
 
@@ -65,5 +92,4 @@ public class Engagement {
 
 	@ManyToMany
 	private Set<Piece> pieces;
-	}
-
+}
